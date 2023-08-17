@@ -1,0 +1,301 @@
+
+/* Start Variables */
+:root {
+    --grad-color1:hsl(293, 100%, 63%);
+    --grad-color2:hsl(264, 100%, 61%);
+    --main-heading:hsl(271, 36%, 24%);
+    --paragraph:hsl(270, 7%, 64%);
+    --app-sub-heading:hsl(276, 100%, 81%);
+    --chat-left:hsl(276, 55%, 52%);
+    --chat-right:hsl(271, 15%, 43%);
+    --placeholder:hsl(206, 6%, 79%);
+    --app-background:hsl(270, 20%, 96%);
+    --send-button:hsl(271, 36%, 24%);
+    --radio-button-outline:hsl(289, 100%, 72%);
+}
+/* End Variables */
+
+/* start global rules */
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Rubik';
+    background-color: var(--app-background);
+    
+  }
+  
+  /* End global rules */
+
+  /* Start Components */
+  /* End Components */
+
+  /* Start Background */
+ 
+  @media (min-width:700px) {
+    .wrap {
+      display: flex;
+      align-items: center;
+      width: 820px;
+      position: relative;
+      transform: translate(19%);
+      height: 504px;
+      }
+  }
+  .wrap {
+    margin: 0;
+  }
+  .shape {
+    background: linear-gradient(180deg,hsl(293, 100%, 63%) 10%, hsl(264, 100%, 61%) 100%);
+    width: 500px;
+    height: 500px;
+    transform: translate(-63%);
+    border-radius: 0 0 50% 50%;
+    
+  }
+  @media (min-width:700px){
+    .shape {
+      transform: translate(-30%);
+    }
+  }
+
+  /* End background */
+
+  /* Start Screen */
+  main {
+    height: 504px;
+    width: 245px;
+    background-color: white;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%,-100%);
+    margin-top: 64px;
+    border-radius: 34px;
+    display: flex; 
+  }
+  @media (min-width:700px){
+    main {
+      left: 31.3%;
+      margin-top: 140px;
+    }
+  }
+  main .notch {
+    width: 122px;
+    height: 28px;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 0 0 15px 15px;
+    
+  }
+  main .screen {
+    width: 223px;
+    height: 484px;
+    background-color: var(--app-background);
+    margin: auto;
+    position: relative;
+    top: -18px;
+    border-radius: 24px;
+    z-index: -1;}
+  main .screen header {
+    height: 64px;
+    width: 100%;
+    background: linear-gradient(270deg,hsl(293, 100%, 63%) 10%, hsl(264, 100%, 61%) 100%);
+    border-radius: 24px 24px 5px 5px;
+  }
+  main .screen header .wrapper {
+    width: calc(100% - 30px);
+    height: 30px;
+    position: relative;
+    top: 27px;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: 10px 30px 1fr 10px;
+    grid-template-rows: 30px;
+    align-items: center;
+   
+  }
+  main .screen header .wrapper i {
+    font-size: 12px;
+    color: white;
+  }
+   main .screen header .wrapper .avatar {
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-content: space-between;
+  } 
+  main .screen header .wrapper img {
+    width: 25px;
+    border-radius: 50px;
+    border: solid white 1px;
+    margin-left: 5px;
+
+  }
+  main .screen header .wrapper .info {
+    margin-left: 7px;
+    display: flex;
+    flex-direction: column;
+  }
+  main .screen header .wrapper .info h2 {
+    font-size: 10px;
+    margin: 0;
+    color: white;
+    font-weight: 500;
+  }
+  main .screen header .wrapper .info h4 {
+    font-size: 7px;
+    margin: 3px 0 0 0;
+    font-weight: 400;
+    color:var(--app-sub-heading);
+  }
+  .chat-left {
+    margin-top: 10px;
+  }
+  .chat-left .chat {
+    background-color:rgb(228, 228, 228);
+    position: relative;
+    left: 8px;
+    border-radius: 10px 10px 10px 3px;
+  }
+  .chat-left .chat p {
+    color: var(--chat-left);
+  }
+
+  .chat {
+    max-width: 125px;
+    height:fit-content;
+    padding: 1px 5px 1px 10px;
+    margin-top: 8px;
+    }
+  .chat p {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    line-height: 1.5;
+    font-size: 8px;
+    font-weight: 400;
+
+  }
+  .chat-right {
+    margin-top: 15px;
+  }
+  .chat-right .chat {
+    background-color: white;
+    border-radius:10px 10px 3px 10px ;
+    position: relative;
+    right: -215px;
+    transform: translate(-100%);
+  }
+  .chat-right .chat p {
+    color: var(--chat-right);
+
+  }
+  .chat-right .chat:last-of-type {
+    padding-right: 0;
+    width: fit-content;
+    padding-right: 7px;
+    
+  }
+  .chat-right .pic-section {
+    margin-top: 8px;
+    position: relative;
+    right: -215px;
+    transform: translate(-100%);
+    width: 125px;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+  }
+  .chat-right .pic-section img {
+    width: 38px;
+    border-radius: 8px;
+  }
+  main .screen .discussion .offer {
+    height: 32px;
+    width: 160px;
+    background: linear-gradient(90deg,hsl(293, 100%, 63%) 10%, hsl(264, 100%, 61%) 100%);
+    border-radius: 10px 10px 10px 3px;
+    position: relative;
+    left: 8px;
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+  }
+  
+  main .screen .discussion .offer input[type="radio"] {
+    margin-right: 7px;
+    margin-left: 6px;  
+  }
+  
+  main .screen .discussion .offer label{
+    font-size:8px;
+    width: 90px;
+    color: white;
+    margin-top: 2px;
+    font-weight: 300;
+    
+  }
+  main .screen .discussion .offer p {
+    font-size: 13px;
+    font-weight: 500;
+    color: white;
+  }
+  main .screen .typing {
+    height: 35px;
+    width: 205px;
+    background-color: white;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%);
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  main .screen .typing p {
+    font-size: 9px;
+    position: absolute;
+    left: 17px;
+    color: var(--placeholder);
+  }
+  main .screen .typing i {
+    font-size: 25px;
+    position: absolute;
+    right: 5px;
+    color: var(--send-button);
+  }
+  /* End Screen */
+
+  /* Start heading */
+  .text {
+    width: 310px;
+    position: relative;
+    top: -440px;
+    text-align: center;
+    left: 50%;
+    transform: translate(-50%);
+    
+  }
+  .text h1 {
+    color: var(--main-heading);
+    font-size: 36px;
+    font-weight: 600;
+    
+  }
+  .text p {
+    color: var(--paragraph);
+    line-height: 1.5;
+  }
+  @media (min-width:700px) {
+    .text {
+      text-align: left;
+      width: 450px;
+      margin-left: 50px;
+    }
+  }
+  /* End heading */
