@@ -24,7 +24,7 @@
   }
   body {
     font-family: 'Rubik';
-    background-color: var(--app-background);
+    background-color:hsl(0, 0%, 99%);
     
   }
   
@@ -35,19 +35,7 @@
 
   /* Start Background */
  
-  @media (min-width:700px) {
-    .wrap {
-      display: flex;
-      align-items: center;
-      width: 820px;
-      position: relative;
-      transform: translate(19%);
-      height: 504px;
-      }
-  }
-  .wrap {
-    margin: 0;
-  }
+  
   .shape {
     background: linear-gradient(180deg,hsl(293, 100%, 63%) 10%, hsl(264, 100%, 61%) 100%);
     width: 500px;
@@ -65,6 +53,19 @@
   /* End background */
 
   /* Start Screen */
+  @media (min-width:700px) {
+    .wrap {
+      display: flex;
+      align-items: center;
+      width: 820px;
+      position: relative;
+      transform: translate(19%);
+      height: 504px;
+      }
+  }
+  .wrap {
+    margin: 0;
+  }
   main {
     height: 504px;
     width: 245px;
@@ -75,6 +76,7 @@
     margin-top: 64px;
     border-radius: 34px;
     display: flex; 
+    box-shadow: 5px 5px 15px 5px rgb(0 0 0 / 5%);
   }
   @media (min-width:700px){
     main {
@@ -105,6 +107,7 @@
     width: 100%;
     background: linear-gradient(270deg,hsl(293, 100%, 63%) 10%, hsl(264, 100%, 61%) 100%);
     border-radius: 24px 24px 5px 5px;
+    box-shadow: 0px 8px 9px 1px rgb(0 0 0 / 5%);
   }
   main .screen header .wrapper {
     width: calc(100% - 30px);
@@ -161,6 +164,7 @@
     position: relative;
     left: 8px;
     border-radius: 10px 10px 10px 3px;
+    
   }
   .chat-left .chat p {
     color: var(--chat-left);
@@ -171,6 +175,7 @@
     height:fit-content;
     padding: 1px 5px 1px 10px;
     margin-top: 8px;
+    box-shadow: 0px 2px 11px 2px rgb(0 0 0 / 5%);
     }
   .chat p {
     margin-top: 5px;
